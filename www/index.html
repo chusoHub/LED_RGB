@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>SAN FERMIN BULL</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet"  href="jquery.mobile-1.4.3.min.css">
+
+		<script src="jquery.js"></script>
+		<script src="jquery.mobile-1.4.3.min.js"></script>
+		<script src="index.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<!-- -->
+		<script type="text/javascript" charset="utf-8">
+		    // Wait for Cordova to load
+		    //
+		    document.addEventListener("deviceready", onDeviceReady, false);
+		    // Cordova is ready
+		    //
+		    function onDeviceReady() {
+		        navigator.splashscreen.show();
+		        setTimeout(function() {
+		        navigator.splashscreen.hide();
+				}, 2000);
+		    }
+        </script>
+</head>
+<body>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item center full">
+                <h1 class="topcoat-navigation-bar__title">LED</h1>
+            </div>
+        </div>
+        <div id="connectionScreen">
+            <ul id="deviceList" class="topcoat-list">      
+            </ul>
+            <div style="margin: 10px">            
+                <button class="topcoat-button" id="refreshButton">Refresh</button>
+            </div>            
+        </div>
+        
+        <div id="colorScreen">
+            <div>
+                Use sliders to set color.
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="255" value="0" name="red" id="red" class="topcoat-range"/>
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="255" value="0" name="green" id="green" class="topcoat-range"/>
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="255" value="0" name="blue" id="blue" class="topcoat-range"/>
+            </div>
+
+            <div id="rgbText">
+                &nbsp;
+            </div>
+            <div id="previewColor">
+            </div>
+            <p>
+                <a class="topcoat-button--large" id="disconnectButton">Disconnect</a>
+            </p>
+        </div>
+        <div id="messageDiv">        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+</body>
+</html>
